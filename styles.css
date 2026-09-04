@@ -470,6 +470,14 @@ img {
 .project > p {
     font-size: 16px;
 }
+@media screen and (max-width: 787px) {
+    .project-overlay h3 {
+    margin-bottom: 0;
+    color: white;
+    font-size: 22px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+}
 .hover-overlay {
     opacity: 0;
 
@@ -608,7 +616,14 @@ img {
         width: calc(50% - 30px);
     }
 }
-@media screen and (max-widtH: 787px) {
+@media screen and (max-width: 787px) {
+    .skill-box h3 {
+    font-size: 20px;
+    /* color: var(--primary); */
+}
+        #skills .container {
+        align-items: flex-start;
+    }
     .skills-wrapper {
         flex-direction: column;
         align-items: center;
@@ -619,6 +634,8 @@ img {
         width: 100%;
         padding: 0;
         margin-bottom: 15px;
+        align-items: flex-start;
+        text-align: left;
     }
     .wrapper > img {
         width: calc(100% - 30px);
