@@ -39,7 +39,7 @@ function isScrolledIntoView(el) {
         // body.style.overflow = 'hidden';
         // $(header).toggleClass('open');
       } else {
-        hamburger.classList.remove("open");3
+        hamburger.classList.remove("open");
         hamburgerOpen = false;
         // mobileMenu.style.maxHeight = null;
         $(mobileMenu).slideToggle();
@@ -65,7 +65,17 @@ function isScrolledIntoView(el) {
     //   });
     // });
 }
+function updateHeader() {
+    if ($(window).scrollTop() > 50) {
+        $('#header').addClass('scrolled');
+    } else {
+        $('#header').removeClass('scrolled');
+    }
+}
 
+$(window).on('scroll', updateHeader);
+
+updateHeader();
   window.onload = function () {
     try {
         hamburgerMenu();
@@ -75,16 +85,16 @@ function isScrolledIntoView(el) {
     }
   }
 
-  window.onscroll = function () {
-    // if (document.querySelector("h2.splitting")) {
-    //     const titles = document.querySelectorAll("h2.splitting");
+  // window.onscroll = function () {
+  //   if (document.querySelector("h2.splitting")) {
+  //       const titles = document.querySelectorAll("h2.splitting");
   
-    //     titles.forEach(function (title) {
-    //       if (isScrolledIntoView(title) === true) {
-    //         title.classList.add("active-split");
-    //       } else {
-    //         title.classList.remove("active-split");
-    //       }
-    //     });
-    //   }
-  }
+  //       titles.forEach(function (title) {
+  //         if (isScrolledIntoView(title) === true) {
+  //           title.classList.add("active-split");
+  //         } else {
+  //           title.classList.remove("active-split");
+  //         }
+  //       });
+  //     }
+  // }
